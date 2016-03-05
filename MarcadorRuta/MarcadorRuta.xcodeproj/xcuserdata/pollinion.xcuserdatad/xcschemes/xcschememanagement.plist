@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>MarcadorRuta.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>0</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>824AC1D81C8A2CAD00049896</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>824AC1EC1C8A2CAD00049896</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>824AC1F71C8A2CAD00049896</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>

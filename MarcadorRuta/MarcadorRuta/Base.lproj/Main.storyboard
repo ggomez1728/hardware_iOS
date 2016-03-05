@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MarcadorRuta" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="akf-hU-PEu">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hba-oP-D2O">
+                                <rect key="frame" x="255" y="457" width="50" height="30"/>
+                                <state key="normal" title="Normal"/>
+                                <connections>
+                                    <action selector="typeMapButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="zKo-50-iAZ"/>
+                                </connections>
+                            </button>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.01" minimumValue="0.01" maximumValue="20.010000000000002" stepValue="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="OuU-Xg-4YY">
+                                <rect key="frame" x="211" y="531" width="94" height="29"/>
+                                <connections>
+                                    <action selector="zoom" destination="BYZ-38-t0r" eventType="valueChanged" id="Y6C-ES-N75"/>
+                                </connections>
+                            </stepper>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="suj-Aw-mMt">
+                                <rect key="frame" x="220" y="488" width="86" height="30"/>
+                                <state key="normal" title="Iniciar rastro"/>
+                                <connections>
+                                    <action selector="startRun" destination="BYZ-38-t0r" eventType="touchUpInside" id="Fmo-Vz-Wye"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="OuU-Xg-4YY" firstAttribute="trailing" secondItem="Hba-oP-D2O" secondAttribute="trailing" id="2ps-tl-8ZG"/>
+                            <constraint firstItem="akf-hU-PEu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="8Oa-AM-23c"/>
+                            <constraint firstItem="akf-hU-PEu" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="MAM-Mi-YpX"/>
+                            <constraint firstItem="OuU-Xg-4YY" firstAttribute="top" secondItem="suj-Aw-mMt" secondAttribute="bottom" constant="13" id="hc6-bu-bfc"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Hba-oP-D2O" secondAttribute="trailing" constant="-1" id="hzz-HF-ffv"/>
+                            <constraint firstItem="suj-Aw-mMt" firstAttribute="top" secondItem="Hba-oP-D2O" secondAttribute="bottom" constant="1" id="niR-x2-LmF"/>
+                            <constraint firstItem="suj-Aw-mMt" firstAttribute="trailing" secondItem="Hba-oP-D2O" secondAttribute="trailing" constant="1" id="nws-bJ-HtG"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="OuU-Xg-4YY" secondAttribute="bottom" constant="8" symbolic="YES" id="oBF-fa-hZe"/>
+                            <constraint firstItem="akf-hU-PEu" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="sUU-Px-0pk"/>
+                            <constraint firstAttribute="trailing" secondItem="akf-hU-PEu" secondAttribute="trailing" id="zBK-sm-O06"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="mapa" destination="akf-hU-PEu" id="ovC-jx-E7L"/>
+                        <outlet property="rastroButton" destination="suj-Aw-mMt" id="TRK-fq-KBm"/>
+                        <outlet property="typeButton" destination="Hba-oP-D2O" id="fnO-Yp-zTF"/>
+                        <outlet property="zoomButton" destination="OuU-Xg-4YY" id="OFY-XF-oU2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="245" y="317"/>
+        </scene>
+    </scenes>
+</document>
